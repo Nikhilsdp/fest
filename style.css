@@ -57,7 +57,7 @@ nav{
     color: white;
     opacity: 0;
     pointer-events: none;
-    font-size: clamp (2.5rem ,0.5rem + 5vw, 3rem);
+    font-size: clamp(2.5rem ,0.5rem + 5vw, 3rem);
 
 }
 .nav-container .links{
@@ -74,7 +74,7 @@ nav{
 }
 .nav-container .links a::before{
     position: absolute;
-    content: " ";
+    content: "";
     bottom:-3px;
     left: 0;
     width: 0%;
@@ -95,7 +95,7 @@ nav{
     transform: translateY(-500px);
     width: 100%;
     height: auto;
-    backdrop-filter: blur(4px) brightness 40%;
+    backdrop-filter:blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: 0.2s linear;
 }
@@ -119,6 +119,7 @@ section{
 section .main-container{
     display: flex;
     justify-content: space-between;
+    padding-left: 100px;
     align-items: center;
 }
 .main-container .image{
@@ -135,13 +136,13 @@ section .main-container{
     animation: animate 1.5s ease-in-out infinite;
 
 }
-@keyframes animate{
+@keyframes animate {
     0%{
     scale: 1;
 
 }
 50%{
-    scale: 1.05;
+    scale: 1.02;
 }
 100%{
     scale: 1;
@@ -152,14 +153,14 @@ section .main-container{
     width: 40%;
 }
 .content h1{
-    font-size: clamp (1rem, 1rem + 5vw,1.8rem);
+    font-size: clamp(1rem, 1rem + 5vw,1.8rem);
 }
 .content h1 span{
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
 }
 .content .typewriter{
-    font-size: clamp (1rem, 1rem + 5vw, 2.5rem);
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
 }
 .content .typewriter-text{
@@ -167,7 +168,7 @@ section .main-container{
     text-shadow: 0 0 10px #b74b4b;
 }
 .content p{
-    font-size: clamp (0.4rem, 0.2rem + 9vw, 1rem);
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
 }
 .social-links i{
@@ -206,7 +207,7 @@ section .main-container{
     scale:1.1;
     color: white;
     border: 2px solid #b74b4b;
-    border-color: transparent;
+    background-color: transparent;
     font-weight: 700;
     box-shadow: 0 0 40px #b74b4b;
 
@@ -214,7 +215,7 @@ section .main-container{
 }
 /*About section styling*/
 section .content{
-    width: 80px;
+    width: 80%;
     margin:0px auto;
     font-family: 'Poppins',sans-serif;
 }
@@ -223,7 +224,7 @@ section .content{
     justify-content: space-between;
     align-items: center;
 }
-.section .title{
+section .title{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -240,6 +241,7 @@ section .title span::before,
 section .title span::after{
     content: "";
     position: absolute;
+    height: 3px;
     width: 100%;
     background: #b74b4b;
     left:0;
@@ -268,7 +270,9 @@ section .title span::after{
 }
 section .topic{
     color: white;
-    font-size: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
 
 }
 .about-details .right p{
@@ -278,23 +282,25 @@ section .topic{
 }
 section .button{
     margin: 16px 0;
+    
 }
 section .button button{
     outline:none;
-    padding: 8px 16px;
+    padding: 1px 16px;
     border-radius: 4px;
     font-size: 25px;
     font-weight: 400;
     background: #b74b4b;
     color: #fff;
     border: 2px solid transparent;
+    cursor: pointer;
     transition: all 0.4s ease;
 
 }
 section .button button:hover{
     border-color: #b74b4b;
-    background-color: #fff;
-    color: #b74b4b;
+    background-color: black;
+    color: white;
 }
 .skills{
     background: black;
@@ -315,6 +321,7 @@ section .button button:hover{
 .skills-details p{
     color: white;
     text-align: justify;
+    margin-right: 25px;
 }
 .skills .skills-details .experience{
     display: flex;
@@ -329,6 +336,7 @@ section .button button:hover{
 .skills-details .experience .exp{
     color: white;
     margin-left:20px;
+    font-size: 18px;
     font-weight: 500;
     margin:0 6px;
 
@@ -420,6 +428,7 @@ section .button button:hover{
     text-align: center;
     margin: auto;
 }
+
 footer{
     background: #b74b4b;
     padding: 15px 0;
@@ -447,15 +456,20 @@ footer .text span a:hover{
     padding: 7px 12px;
     font-size: 18px;
     border-radius: 6px;
-    box-shadow: rgba(0,0,0,0,0.15);
+    box-shadow: rgba(0,0,0,0.15);
     display: none;
 }
 
 @media (max-width: 1000px){
     .about .about-details{
-        display: flex;
+        
         justify-content:center;
-        width:100%;
+        flex-direction: column;
+    }
+    .about-details .left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     .about-details .right{
         width: 90%;
@@ -540,7 +554,7 @@ section .main-container{
 
     }
     .main-container .content{
-        width:80%
+        width:80%;
     }
     .main-container button{
         margin-top: 15px;
